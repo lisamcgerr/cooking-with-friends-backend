@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :recipes
   resources :users
 
+  post '/recipes/new', to: 'recipes#create'
+  get '/recipes', to: 'recipes#index'
   post '/login', to: 'auth#create'
   get '/profile', to: 'auth#show'
 
