@@ -12,8 +12,8 @@ class RecipesController < ApplicationController
     end
     
     def create
-        note = Recipe.create(recipe_params)
-        render json: { note: RecipeSerializer.new(recipe)}, status: :created
+        recipe = Recipe.create(recipe_params)
+        render json: recipe
     end
 
     private
