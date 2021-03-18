@@ -92,14 +92,14 @@ Recipe.create(  name: 'Asian Beef and Noodles',
 User.create(first_name: 'Julia',
     last_name: 'Child',
     username: 'Julia',
-    password_digest: 'abc',
+    password: 'abc',
     email: 'julia.child@gmail.com',
     bio: 'Until I discovered cooking, I was never really interested in anything')
 
 User.create(first_name: 'William',
     last_name: 'Shakespeare',
     username: 'William_Shakes',
-    password_digest: 'abc',
+    password: 'abc',
     email: 'william@gmail.com',
     bio: 'Tis an ill cook that cannot lick his own fingers')
 
@@ -107,21 +107,21 @@ User.create(first_name: 'William',
 User.create(first_name: 'Lisa',
             last_name: 'McGerr',
             username: 'lisa',
-            password_digest: 'abc',
+            password: 'abc',
             email: 'lisamarie.mcgerr@gmail.com',
             bio: 'I cook with wine, sometimes I even add it to the food')
 
 User.create(first_name: 'Sam',
             last_name: 'Olanipekun',
             username: 'samo',
-            password_digest: 'abc',
+            password: 'abc',
             email: 'samo@gmail.com',
             bio: 'Always start out with a larger pot than what you think you need')
 
 User.create(first_name: 'Dexter',
             last_name: 'McGerr',
             username: 'dog_who_loves_food',
-            password_digest: 'abc',
+            password: 'abc',
             email: 'give_me_treats@gmail.com',
             bio: 'I will eat anything my parents give me')
 
