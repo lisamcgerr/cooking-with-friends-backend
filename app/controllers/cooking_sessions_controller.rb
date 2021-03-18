@@ -7,25 +7,13 @@ class CookingSessionsController < ApplicationController
         }, :except => [:updated_at, :created_at])
     end
 
-    def show 
-        # cooking_session = CookingSession.find_by(id: params[:id])
-        # render json: cooking_session.to_json(:include => {
-        #     :recipe => {:only => [:name, :description, :prep_time, :recipe_link, :image]},
-        #     :user_sessions => {:only => [:user_id, :cooking_session_id ]}
-        # }, :except => [:updated_at, :created_at])
-
+    def show
         cooking_session = CookingSession.find_by(id: params[:id])
         render json: cooking_session.to_json(:include => {
             :recipe => {:only => [:name, :description, :prep_time, :recipe_link, :image]},
             :users => {:only => [:id, :first_name, :last_name, :username, :email, :bio ]}
         }, :except => [:updated_at, :created_at])
 
-        # cooking_session = CookingSession.find_by(id: params[:id])
-        # render json: cooking_session.to_json(:include => {
-        #     :recipe => {:only => [:name, :description, :prep_time, :recipe_link, :image]},
-        #     :user_sessions => {:only => [:user_id, :cooking_session_id ]}
-        #     :users => {:only => [:first_name]}
-        # }, :except => [:updated_at, :created_at])
     end 
 
     def create

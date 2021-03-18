@@ -13,7 +13,7 @@ class AuthController < ApplicationController
         else
           render json: { error: 'Invalid username or password.'}
         end
-        # render json: {hello: 'world'}
+          
     end
     
     def show

@@ -131,15 +131,19 @@ CookingSession.create(title: 'Chicago Wednesday Night Cook Off', recipe_id: 7)
 
 UserSession.create(user_id: 1, cooking_session_id: 1)
 UserSession.create(user_id: 2, cooking_session_id: 1)
-UserSession.create(user_id: 3, cooking_session_id: 1)
 
-UserSession.create(user_id: 3, cooking_session_id: 1)
-UserSession.create(user_id: 2, cooking_session_id: 1)
-UserSession.create(user_id: 5, cooking_session_id: 1)
 
-UserSession.create(user_id: 3, cooking_session_id: 1)
-UserSession.create(user_id: 4, cooking_session_id: 1)
-UserSession.create(user_id: 5, cooking_session_id: 1)
+UserSession.create(user_id: 4, cooking_session_id: 2)
+UserSession.create(user_id: 1, cooking_session_id: 2)
+UserSession.create(user_id: 5, cooking_session_id: 2)
+
+UserSession.create(user_id: 3, cooking_session_id: 3)
+UserSession.create(user_id: 4, cooking_session_id: 3)
+UserSession.create(user_id: 5, cooking_session_id: 3)
+
+# UserSession.create(user_id: , cooking_session_id: )
+# UserSession.create(user_id: , cooking_session_id: )
+# UserSession.create(user_id: , cooking_session_id: )
 
 puts "after successfully seeding..."
 puts "#{User.all.count} users"

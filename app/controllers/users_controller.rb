@@ -3,12 +3,20 @@ class UsersController < ApplicationController
 
     def index
         users = User.all
-        render json: users
+        render json: users.to_json(:include => {
+            :cooking_sessions => {:only => [:id, :title, :date, :meeting_link, :recipe_id ]},
+            :recipes => {:only => [:id, :name, :description, :prep_time, :recipe_link, :image]}
+        }, :except => [:updated_at, :created_at])
     end
 
     def show 
         user = User.find_by(id: params[:id])
-        render json: user
+        render json: user.to_json(:include => {
+            :cooking_sessions => {:only => [:id, :title, :date, :meeting_link, :recipe_id ]},
+            :recipes => {:only => [:id, :name, :description, :prep_time, :recipe_link, :image]}
+        }, :except => [:updated_at, :created_at])
+
+
     end 
 
     # def create
