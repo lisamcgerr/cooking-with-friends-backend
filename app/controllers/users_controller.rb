@@ -5,7 +5,8 @@ class UsersController < ApplicationController
         users = User.all
         render json: users.to_json(:include => {
             :cooking_sessions => {:only => [:id, :title, :date, :meeting_link, :recipe_id ]},
-            :recipes => {:only => [:id, :name, :description, :prep_time, :recipe_link, :image]}
+            :recipes => {:only => [:id, :name, :description, :prep_time, :recipe_link, :image]},
+            :user_sessions => {:only => [:id, :user_id, :cooking_session_id]}
         }, :except => [:updated_at, :created_at])
     end
 
@@ -13,11 +14,17 @@ class UsersController < ApplicationController
         user = User.find_by(id: params[:id])
         render json: user.to_json(:include => {
             :cooking_sessions => {:only => [:id, :title, :date, :meeting_link, :recipe_id ]},
-            :recipes => {:only => [:id, :name, :description, :prep_time, :recipe_link, :image]}
+            :recipes => {:only => [:id, :name, :description, :prep_time, :recipe_link, :image]},
+            :user_sessions => {:only => [:id, :user_id, :cooking_session_id]}
         }, :except => [:updated_at, :created_at])
 
 
     end 
+
+    def create
+        user = User.create(user_params)
+        render json: user
+    end
 
     # def create
     #     @user = User.create(user_params)

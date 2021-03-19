@@ -13,12 +13,11 @@ class CookingSessionsController < ApplicationController
             :recipe => {:only => [:name, :description, :prep_time, :recipe_link, :image]},
             :users => {:only => [:id, :first_name, :last_name, :username, :email, :bio ]}
         }, :except => [:updated_at, :created_at])
-
     end 
 
     def create
-        cooking_session = CookingSession.new(cooking_session_params)
-        cooking_session.save
+        cooking_session = CookingSession.create(cooking_session_params)
+        render json: cooking_session
     end
 
     def update

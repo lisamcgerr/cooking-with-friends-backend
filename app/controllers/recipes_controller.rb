@@ -7,7 +7,7 @@ class RecipesController < ApplicationController
     end
 
     def show
-        recipe = Recipe.find_by(name: params[:name])
+        recipe = Recipe.find_by(id: params[:id])
         render json: recipe
     end
     
@@ -15,6 +15,12 @@ class RecipesController < ApplicationController
         recipe = Recipe.create(recipe_params)
         render json: recipe
     end
+
+    # def destroy
+    #     recipe = Recipe.find_by(id: params[:id])
+    #     recipe.destoy
+    #     render json: {message: 'This recipe has been deleted'}
+    # end
 
     private
 
