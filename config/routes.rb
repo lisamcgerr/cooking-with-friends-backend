@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :recipes
   resources :users
 
+  post '/signup', to: 'users#new'
   post '/recipes/new', to: 'recipes#create'
   get '/recipes', to: 'recipes#index'
   post '/login', to: 'auth#create'
