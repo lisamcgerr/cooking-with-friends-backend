@@ -1,5 +1,5 @@
 class CookingSessionSerializer < ActiveModel::Serializer
-    attributes :id, :title, :date, :meeting_link, :recipe_id
+    attributes :id, :title, :date, :meeting_link, :recipe_id, :host_id
 
     belongs_to :recipe
     has_many :user_sessions

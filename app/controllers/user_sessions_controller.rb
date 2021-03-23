@@ -2,16 +2,16 @@ class UserSessionsController < ApplicationController
     def index
         user_sessions = UserSession.all
         render json: user_sessions.to_json(:include => {
-            :cooking_session => {:only => [:id, :title, :date, :meeting_link, :recipe_id ]},
-            :user => {:only => [:id, :first_name, :last_name, :username, :password_digest, :email, :bio]}
+            :cooking_session => {:only => [:id, :title, :date, :meeting_link, :recipe_id, :host_id, :public ]},
+            :user => {:only => [:id, :first_name, :last_name, :username, :password_digest, :email, :bio, :image]}
         }, :except => [:updated_at, :created_at])
     end
 
     def show 
         user_session = UserSession.find_by(id: params[:id])
         render json: user_session.to_json(:include => {
-            :cooking_session => {:only => [:id, :title, :date, :meeting_link, :recipe_id ]},
-            :user => {:only => [:id, :first_name, :last_name, :username, :password_digest, :email, :bio]}
+            :cooking_session => {:only => [:id, :title, :date, :meeting_link, :recipe_id, :host_id, :public ]},
+            :user => {:only => [:id, :first_name, :last_name, :username, :password_digest, :email, :bio, :image]}
         }, :except => [:updated_at, :created_at])
 
 

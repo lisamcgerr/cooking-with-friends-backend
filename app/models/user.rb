@@ -2,6 +2,7 @@ class User < ApplicationRecord
     has_many :user_sessions
     has_many :cooking_sessions, through: :user_sessions
     has_many :recipes, through: :cooking_sessions
+    has_many :comments
 
     validates :username, uniqueness: true
     validates :username, presence: true

@@ -12,15 +12,29 @@ class RecipesController < ApplicationController
     end
     
     def create
-        recipe = Recipe.create(recipe_params)
+        recipe = Recipe.new(recipe_params)
+        byebug
+        recipe.save
         render json: recipe
     end
 
-    # def destroy
-    #     recipe = Recipe.find_by(id: params[:id])
-    #     recipe.destoy
-    #     render json: {message: 'This recipe has been deleted'}
-    # end
+    def update
+        recipe = Recipe.find_by(id: params[:id])
+        #byebug
+        recipe.likes = recipe.likes + 1
+        recipe.save
+        #byebug
+        render json: recipe
+        # else 
+        #     render json: { error: 'failed to edit recipe' }, status: :not_acceptable
+        # end 
+    end
+
+    def destroy
+        recipe = Recipe.find_by(id: params[:id])
+        recipe.destoy
+        render json: {message: 'This recipe has been deleted'}
+    end
 
     private
 
