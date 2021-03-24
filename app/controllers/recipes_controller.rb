@@ -13,7 +13,7 @@ class RecipesController < ApplicationController
     
     def create
         recipe = Recipe.new(recipe_params)
-        byebug
+        #byebug
         recipe.save
         render json: recipe
     end

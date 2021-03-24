@@ -1,9 +1,7 @@
 class UsersController < ApplicationController
-    # skip_before_action :authorized, only: [:create, :index, :show]
 
     def index
         users = User.all
-        # render json: users
         render json: users.to_json(:include => {
             :cooking_sessions => {:only => [:id, :title, :date, :meeting_link, :recipe_id, :host_id, :public  ]},
             :recipes => {:only => [:id, :name, :description, :prep_time, :recipe_link, :image, :likes]},
@@ -14,7 +12,6 @@ class UsersController < ApplicationController
 
     def show 
         user = User.find_by(id: params[:id])
-        #render json: user
         render json: user.to_json(:include => {
             :cooking_sessions => {:only => [:id, :title, :date, :meeting_link, :recipe_id, :host_id, :public ]},
             :recipes => {:only => [:id, :name, :description, :prep_time, :recipe_link, :image, :likes]},
@@ -50,12 +47,11 @@ class UsersController < ApplicationController
     #       render json: { error: 'failed to create user' }, status: :not_acceptable
     #     end
     # end
-    def create
-        user = User.new(user_params)
-        user_id = User.last.id + 1
-        user.id = user_id
-        user.save
-            # payload = { user_id: user.id }
+
+           # user_id = User.last.id + 1
+        # user.id = user_id
+        # user.save
+        #     # payload = { user_id: user.id }
             # hmac_secret = 'S3CR3T'
             # token = JWT.encode(payload, hmac_secret, 'HS256')
             # render json: { user: UserSerializer.new(user), token: token }, status: :created
@@ -64,7 +60,16 @@ class UsersController < ApplicationController
         # end
         #byebug
         # user.save
-        # render json: user
+
+
+    def create
+        user = User.create(user_params)
+        #byebug
+        if user.valid? 
+            render json: user
+        else
+            render json: { error: 'failed to create user' }, status: :not_acceptable
+        end
     end
 
 

@@ -140,6 +140,16 @@ User.create(first_name: 'Dexter',
             bio: 'I will eat anything my parents give me',
             image: 'https://user-images.githubusercontent.com/73184313/112050087-726da480-8b1e-11eb-884e-ec03154a1980.png')
 
+
+            User.create(first_name: 'Dex',
+                last_name: 'McGerr',
+                username: 'dog_who_loves_humans',
+                password: 'abc',
+                email: 'treats@gmail.com',
+                bio: 'I will eat anything my parents give me',
+                image: 'https://user-images.githubusercontent.com/73184313/112050087-726da480-8b1e-11eb-884e-ec03154a1980.png')
+
+
 CookingSession.create(title: 'Enchailada Night', recipe_id: 1, host_id: 1)
 CookingSession.create(title: 'Family Cooking Night', recipe_id: 5, host_id: 1)
 CookingSession.create(title: 'Chicago Wednesday Night Cook Off', recipe_id: 7, host_id: 3)
