@@ -15,10 +15,15 @@ class CookingSessionsController < ApplicationController
         }, :except => [:updated_at, :created_at])
     end 
 
+
     def create
         cooking_session = CookingSession.create(cooking_session_params)
         #byebug
         if cooking_session
+            cook_id = cooking_session.id
+            user_session = UserSession.new(user_id: cooking_session.host_id, cooking_session_id: cooking_session.id)
+            #byebug
+            user_session.save
             render json: cooking_session
         else
             render json: { error: 'failed to create a cooking session' }, status: :not_acceptable

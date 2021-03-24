@@ -18,8 +18,9 @@ class UserSessionsController < ApplicationController
     end 
 
     def create
-      user_session = UserSession.create(user_session_params)
-      render json: user_session
+        #byebug
+        user_session = UserSession.create(user_session_params)
+        render json: user_session
     end
 
     def update

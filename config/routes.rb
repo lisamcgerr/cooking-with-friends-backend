@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   post '/login', to: 'auth#create'
   get '/profile', to: 'auth#show'
   post '/createaclass', to: 'cooking_sessions#create'
+  post '/createaclass', to: 'user_sessions#create'
   patch '/recipes/:id', to: 'recipes#update'
+
 
 end
