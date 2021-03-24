@@ -150,9 +150,9 @@ User.create(first_name: 'Dexter',
                 image: 'https://user-images.githubusercontent.com/73184313/112050087-726da480-8b1e-11eb-884e-ec03154a1980.png')
 
 
-CookingSession.create(title: 'Enchailada Night', recipe_id: 1, host_id: 1)
-CookingSession.create(title: 'Family Cooking Night', recipe_id: 5, host_id: 1)
-CookingSession.create(title: 'Chicago Wednesday Night Cook Off', recipe_id: 7, host_id: 3)
+CookingSession.create(title: 'Enchailada Night', recipe_id: 1, host_id: 1, meeting_link: 'https://flatironschool.zoom.us/j/94771026740?pwd=WThoSTdkVnArVTQ1d29KVnhIdVdqUT09#success', date: Time.now )
+CookingSession.create(title: 'Family Cooking Night', recipe_id: 5, host_id: 1, meeting_link: 'https://flatironschool.zoom.us/j/94771026740?pwd=WThoSTdkVnArVTQ1d29KVnhIdVdqUT09#success', date: Time.now)
+CookingSession.create(title: 'Chicago Wednesday Night Cook Off', recipe_id: 7, host_id: 3, meeting_link: 'https://flatironschool.zoom.us/j/94771026740?pwd=WThoSTdkVnArVTQ1d29KVnhIdVdqUT09#success', date: Time.now)
 
 UserSession.create(user_id: 1, cooking_session_id: 1)
 UserSession.create(user_id: 2, cooking_session_id: 1)
