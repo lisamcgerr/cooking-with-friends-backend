@@ -63,9 +63,10 @@ class UsersController < ApplicationController
 
 
     def create
+        #byebug
         user = User.create(user_params)
         #byebug
-        if user.valid? 
+        if user
             render json: user
         else
             render json: { error: 'failed to create user' }, status: :not_acceptable
