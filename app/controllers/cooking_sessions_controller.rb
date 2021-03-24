@@ -16,10 +16,13 @@ class CookingSessionsController < ApplicationController
     end 
 
     def create
-        cooking_session = CookingSession.new(cooking_session_params)
-        byebug
-        cooking_session.save
-        render json: cooking_session
+        cooking_session = CookingSession.create(cooking_session_params)
+        #byebug
+        if cooking_session
+            render json: cooking_session
+        else
+            render json: { error: 'failed to create a cooking session' }, status: :not_acceptable
+        end
     end
 
     def update
@@ -40,6 +43,6 @@ class CookingSessionsController < ApplicationController
       private
     
     def cooking_session_params
-        params.require(:cooking_session).permit(:title, :date, :meeting_link, :recipe_id, :host_id, :public)
+        params.require(:cooking_session).permit(:title, :date, :meeting_link, :recipe_id, :host_id)
     end  
 end
