@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   post '/createaclass', to: 'cooking_sessions#create'
   post '/createaclass', to: 'user_sessions#create'
   patch '/recipes/:id', to: 'recipes#update'
+  post '/allclasses', to: 'user_sessions#create'
 
 
 end

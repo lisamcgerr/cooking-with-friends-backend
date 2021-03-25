@@ -19,8 +19,14 @@ class UserSessionsController < ApplicationController
 
     def create
         #byebug
-        user_session = UserSession.create(user_session_params)
-        render json: user_session
+        user_session = UserSession.new(user_session_params)
+        #byebug
+        if user_session.save
+            #user_session = UserSession.create(user_session_params)
+            render json: user_session
+        else
+            render json: {message: 'user already in cooking session'}
+        end
     end
 
     def update
