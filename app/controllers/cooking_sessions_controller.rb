@@ -19,20 +19,10 @@ class CookingSessionsController < ApplicationController
     def create
         cooking_session = CookingSession.create(cooking_session_params)
         if cooking_session
-            render json: cooking_session
             cook_id = cooking_session.id
-            user_session = UserSession.create(user_id: cooking_session.host_id, cooking_session_id: cooking_session.id).to_json
-            #byebug
-            #user_session = UserSession.create(user_id: cooking_session.host_id, cooking_session_id: cooking_session.id)
-            #render json: cooking_session
+            user_session = UserSession.create(user_id: cooking_session.host_id, cooking_session_id: cooking_session.id)
+            render json: cooking_session
 
-            # if user_session
-            #     render json: user_session
-            #     #render json: {user_sessions: user_session, sessions: user_session, cooking_session: cooking_session, user_cooking_session: cooking_session}
-
-            # else
-            #     render json: { error: 'failed to create a user session' }, status: :not_acceptable
-            # end
         else
             render json: { error: 'failed to create a cooking session' }, status: :not_acceptable
         end
