@@ -12,8 +12,9 @@ class RecipesController < ApplicationController
     end
     
     def create
+        #byebug
         recipe = Recipe.new(recipe_params)
-        byebug
+        #byebug
         recipe.save
         render json: recipe
     end
@@ -21,13 +22,11 @@ class RecipesController < ApplicationController
     def update
         recipe = Recipe.find_by(id: params[:id])
         #byebug
-        recipe.likes = recipe.likes + 1
-        recipe.save
-        #byebug
-        render json: recipe
-        # else 
-        #     render json: { error: 'failed to edit recipe' }, status: :not_acceptable
-        # end 
+        if recipe.update(recipe_params)
+            render json:recipe
+        else 
+            render json: { error: 'failed to update recipe' }, status: :not_acceptable
+        end 
     end
 
     def destroy
@@ -39,7 +38,7 @@ class RecipesController < ApplicationController
     private
 
     def recipe_params
-        params.require(:recipe).permit(:name, :prep_time, :recipe_link, :image, :description)
+        params.require(:recipe).permit(:name, :prep_time, :recipe_link, :image, :description, :likes)
     end
 
 end
