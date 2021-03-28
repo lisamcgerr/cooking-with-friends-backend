@@ -81,6 +81,286 @@ Recipe.create(  name: 'Asian Beef and Noodles',
                 image: 'https://user-images.githubusercontent.com/73184313/111374764-79526e00-866b-11eb-8ffe-dc5f18a37726.jpeg',
                 likes: 0)
 
+Recipe.create(  name: 'Lil Cheddar Meat Loaves', 
+    description: 'I got this recipe from my aunt when I was a teen and have made these miniature loaves many times since. My husband and three children count this main dish among their favorites. —Kathy Bowron, Cocolalla, Idaho',
+    prep_time: '25 minutes', 
+    recipe_link: 'https://www.tasteofhome.com/recipes/li-l-cheddar-meat-loaves/', 
+    image: 'https://user-images.githubusercontent.com/73184313/112767956-1eac0100-8fdf-11eb-8d1e-e7320ececa87.jpeg',
+    likes: 0)
+
+Recipe.create(  name: 'Garlic Beef Enchiladas', 
+    description: 'Beef enchiladas are typically prepared with corn tortillas, but my husband, Jeff, and I prefer flour tortillas. I use them in this saucy casserole that has irresistible home-cooked flavor and a subtle kick. —Jennifer Standridge, Dallas, Georgia',
+    prep_time: '30 minutes', 
+    recipe_link: 'https://www.tasteofhome.com/recipes/garlic-beef-enchiladas/', 
+    image: 'https://user-images.githubusercontent.com/73184313/112768174-4d76a700-8fe0-11eb-8a71-3621f3c1619b.jpeg',
+    likes: 0)
+
+Recipe.create(  name: 'Skillet Mac & Cheese', 
+        description: 'This super creamy mac 'n' cheese is so simple it seems almost too easy! Kids really go for the rich cheese flavor, but I have never met an adult who didnt love it too. —Ann Bowers, Rockport, Texas',
+        prep_time: '25  minutes', 
+        recipe_link: 'https://www.tasteofhome.com/recipes/skillet-mac-cheese/', 
+        image: 'https://user-images.githubusercontent.com/73184313/112768183-5c5d5980-8fe0-11eb-8859-ff57dd750aad.jpeg',
+        likes: 0)
+
+Recipe.create(  name: 'Chicken and Dumplings', 
+    description: 'Perfect for chilly winter nights, this main course is speedy, low in fat and a delicious one-dish meal. —Nancy Tuck, Elk Falls, Kansas',
+    prep_time: '30 minutes', 
+    recipe_link: 'https://www.tasteofhome.com/recipes/chicken-and-dumplings/', 
+    image: 'https://user-images.githubusercontent.com/73184313/112768227-9b8baa80-8fe0-11eb-92e2-127fc1fce23b.jpeg',
+    likes: 0)
+
+Recipe.create(  name: 'Cabbage Roll Casserole', 
+    description: 'I layer cabbage with tomato sauce and ground beef lasagna-style to create a hearty casserole that tastes like cabbage rolls but without all the work. —Doreen Martin, Kitimat, British Columbia',
+    prep_time: '20 minutes', 
+    recipe_link: 'https://www.tasteofhome.com/recipes/cabbage-roll-casserole/', 
+    image: 'https://user-images.githubusercontent.com/73184313/112768261-d68dde00-8fe0-11eb-8d8e-aa5ea601fd85.jpeg',
+    likes: 0)
+
+Recipe.create(  name: 'Parmesan Chicken', 
+    description: 'The savory coating on this chicken has the satisfying flavor of Parmesan cheese. It is easy enough to be a family weekday meal yet impressive enough to serve to guests. When I make this baked parmesan crusted chicken for dinner, we never have leftovers. —Schelby Thompson, Camden Wyoming, Delaware',
+    prep_time: '10 minutes', 
+    recipe_link: 'https://www.tasteofhome.com/recipes/parmesan-chicken/', 
+    image: 'https://user-images.githubusercontent.com/73184313/112768330-3dab9280-8fe1-11eb-8d89-e38c3cf6c201.jpeg',
+    likes: 0)
+
+Recipe.create(  name: 'Traditional Meat Loaf', 
+    description: 'Topped with a sweet sauce, this traditional meat loaf recipe tastes so good that you might want to double it so everyone can have seconds. It also freezes well. —Gail Graham, Maple Ridge, British Columbia',
+    prep_time: '15 minutes', 
+    recipe_link: 'https://user-images.githubusercontent.com/73184313/112768346-561bad00-8fe1-11eb-96f1-4d5deec67427.jpeg', 
+    image: 'https://www.tasteofhome.com/recipes/traditional-meat-loaf/',
+    likes: 0)
+
+Recipe.create(  name: 'Firecracker Casserole', 
+    description: 'My husband and I love this southwestern-style firecracker casserole. The flavor reminds us of enchiladas, but the recipe does not require the extra time to roll them up. —Teressa Eastman, El Dorado, Kansas',
+    prep_time: '15 minutes', 
+    recipe_link: 'https://www.tasteofhome.com/recipes/firecracker-casserole/', 
+    image: 'https://user-images.githubusercontent.com/73184313/112768411-a7c43780-8fe1-11eb-8753-ef11742bce12.jpeg',
+    likes: 0)
+
+Recipe.create(  name: 'Favorite Baked Spaghetti', 
+    description: 'This yummy baked spaghetti casserole will be requested again and again for potlucks and family gatherings. It is especially popular with my grandchildren, who just love baked spaghetti with all the cheese. —Louise Miller, Westminster, Maryland',
+    prep_time: '25 minutes', 
+    recipe_link: 'https://www.tasteofhome.com/recipes/favorite-baked-spaghetti/', 
+    image: 'https://user-images.githubusercontent.com/73184313/112768447-c75b6000-8fe1-11eb-8c10-e91fa5788d63.jpeg',
+    likes: 0)
+
+Recipe.create(  name: 'Chicken Zucchini Casserole', 
+    description: 'A co-worker shared this chicken zucchini casserole recipe that was originally her grandmothers. When I make it, I use pre-cooked chicken from the grocery store and fresh zucchini my neighbor gives me from his garden. —Bev Dutro, Dayton, Ohio',
+    prep_time: '20 minutes', 
+    recipe_link: 'https://www.tasteofhome.com/recipes/chicken-zucchini-casserole/', 
+    image: 'https://user-images.githubusercontent.com/73184313/112768514-f8d42b80-8fe1-11eb-93fa-acf471aaaaaf.jpeg',
+    likes: 0)
+
+Recipe.create(  name: 'Brown Sugar-Glazed Salmon', 
+    description: 'Pop these protein-packed salmon fillets in the oven before whipping up a sweet basting sauce. This tangy entree cooks up in minutes making it a perfect meal for busy families and unexpected weekend guests. —Debra Martin, Belleville, Michigan',
+    prep_time: '25 minutes', 
+    recipe_link: 'https://www.tasteofhome.com/recipes/brown-sugar-glazed-salmon/', 
+    image: 'https://user-images.githubusercontent.com/73184313/112768548-21f4bc00-8fe2-11eb-844f-b843a4139c97.jpeg',
+    likes: 0)
+
+Recipe.create(  name: 'Chicken Noodle Casserole', 
+    description: 'Everyone who tries this comforting, cheesy chicken and noodle casserole asks for the recipe. It is so simple to make that sometimes I feel like Im cheating! —Kay Pederson, Yellville, Arkansas',
+    prep_time: '15 minutes', 
+    recipe_link: 'https://www.tasteofhome.com/recipes/chicken-noodle-casserole/', 
+    image: 'https://user-images.githubusercontent.com/73184313/112768592-54061e00-8fe2-11eb-88e0-296a90411dab.jpeg',
+    likes: 0)
+
+Recipe.create(  name: 'Southwestern Casserole', 
+    description: 'I have been making this mild family-pleasing southwest casserole recipe for years. It tastes wonderful, fits nicely into our budget and, best of all, makes a second one to freeze and enjoy later. —Joan Hallford, North Richland Hills, Texas',
+    prep_time: '25 minutes', 
+    recipe_link: 'https://www.tasteofhome.com/recipes/southwestern-casserole/', 
+    image: 'https://user-images.githubusercontent.com/73184313/112768631-7dbf4500-8fe2-11eb-85b4-2cf19f144484.jpeg',
+    likes: 0)
+
+Recipe.create(  name: 'Melt-in-Your-Mouth Chuck Roast', 
+    description: 'My husband and I like chuck roast recipes, so this slow-cooked recipe is terrific. You will also love how flavorful and tender this comforting beef chuck roast turns out. —Bette McCumber, Schenectady, New York',
+    prep_time: '20 minutes', 
+    recipe_link: 'https://www.tasteofhome.com/recipes/melt-in-your-mouth-chuck-roast/', 
+    image: 'https://user-images.githubusercontent.com/73184313/112768667-a9dac600-8fe2-11eb-9db6-cc77f6fd87e8.jpeg',
+    likes: 0)
+
+Recipe.create(  name: 'Best Lasagna', 
+    description: 'Want to know how to make lasagna for a casual holiday meal? You cannot go wrong with this deliciously rich meat lasagna recipe. My grown sons and daughter-in-law request it for their birthdays, too. —Pam Thompson, Girard, Illinois',
+    prep_time: '1 hour', 
+    recipe_link: 'https://www.tasteofhome.com/recipes/best-lasagna/', 
+    image: 'https://user-images.githubusercontent.com/73184313/112768694-d42c8380-8fe2-11eb-8b63-cc94dd91f738.jpeg',
+    likes: 0)
+
+Recipe.create(  name: 'Basil Pork Chops', 
+    description: 'Just a few ingredients give a tender pork loin chop all the glazed goodness it needs. Serve with your favorite roasted veggies and you’ve got a meal bursting with flavor. —Lisa Gilliland, Fort Collins, Colorado',
+    prep_time: '25 minutes', 
+    recipe_link: 'https://www.tasteofhome.com/recipes/basil-pork-chops/', 
+    image: 'https://user-images.githubusercontent.com/73184313/112768729-076f1280-8fe3-11eb-872d-a19d165c007f.jpeg',
+    likes: 0)
+
+Recipe.create(  name: 'Shrimp Tortellini Pasta Toss', 
+    description: 'No matter how you toss em up, shrimp and thyme play nicely with any spring-fresh vegetable. —Taste of Home Test Kitchen',
+    prep_time: '20 minutes', 
+    recipe_link: 'https://www.tasteofhome.com/recipes/shrimp-tortellini-pasta-toss/', 
+    image: 'https://user-images.githubusercontent.com/73184313/112768756-32f1fd00-8fe3-11eb-920f-d47703d520e4.jpeg',
+    likes: 0)
+
+Recipe.create(  name: 'Swedish Meatballs', 
+    description: 'Mom fixed this Swedish meatball recipe for all sorts of family dinners, potluck suppers and PTA meetings. The scent of browning meat is intoxicating. Add to that the sweet smell of onions caramelizing, and everyone’s mouth starts watering. —Marybeth Mank, Mesquite, Texas',
+    prep_time: '30 minutes', 
+    recipe_link: 'https://www.tasteofhome.com/recipes/mom-s-swedish-meatballs/', 
+    image: 'https://user-images.githubusercontent.com/73184313/112768796-603eab00-8fe3-11eb-9bb3-bbf1765afb44.jpeg',
+    likes: 0)
+
+Recipe.create(  name: 'Potato Kielbasa Skillet', 
+    description: 'No need to hunt through kielbasa and potato recipes, this smoky take steals the show as a hearty home-style, all-in-one meal. Its especially perfect on those cold late fall and early winter nights. —Taste of Home Test Kitchen, Milwaukee, Wisconsin',
+    prep_time: '30 minutes', 
+    recipe_link: 'https://www.tasteofhome.com/recipes/potato-kielbasa-skillet/', 
+    image: 'https://user-images.githubusercontent.com/73184313/112768847-92500d00-8fe3-11eb-8cd3-818dd2fba0bb.jpeg',
+    likes: 0)
+
+# Recipe.create(  name: '', 
+#     description: '',
+#     prep_time: '', 
+#     recipe_link: '', 
+#     image: '',
+#     likes: 0)
+
+# Recipe.create(  name: '', 
+#     description: '',
+#     prep_time: '', 
+#     recipe_link: '', 
+#     image: '',
+#     likes: 0)
+
+# Recipe.create(  name: '', 
+#     description: '',
+#     prep_time: '', 
+#     recipe_link: '', 
+#     image: '',
+#     likes: 0)
+
+# Recipe.create(  name: '', 
+#         description: '',
+#         prep_time: '', 
+#         recipe_link: '', 
+#         image: '',
+#         likes: 0)
+
+# Recipe.create(  name: '', 
+#     description: '',
+#     prep_time: '', 
+#     recipe_link: '', 
+#     image: '',
+#     likes: 0)
+
+# Recipe.create(  name: '', 
+#     description: '',
+#     prep_time: '', 
+#     recipe_link: '', 
+#     image: '',
+#     likes: 0)
+
+# Recipe.create(  name: '', 
+#     description: '',
+#     prep_time: '', 
+#     recipe_link: '', 
+#     image: '',
+#     likes: 0)
+
+# Recipe.create(  name: '', 
+#     description: '',
+#     prep_time: '', 
+#     recipe_link: '', 
+#     image: '',
+#     likes: 0)
+
+# Recipe.create(  name: '', 
+#     description: '',
+#     prep_time: '', 
+#     recipe_link: '', 
+#     image: '',
+#     likes: 0)
+
+# Recipe.create(  name: '', 
+#     description: '',
+#     prep_time: '', 
+#     recipe_link: '', 
+#     image: '',
+#     likes: 0)
+
+# Recipe.create(  name: '', 
+#     description: '',
+#     prep_time: '', 
+#     recipe_link: '', 
+#     image: '',
+#     likes: 0)
+
+# Recipe.create(  name: '', 
+#     description: '',
+#     prep_time: '', 
+#     recipe_link: '', 
+#     image: '',
+#     likes: 0)
+
+# Recipe.create(  name: '', 
+#     description: '',
+#     prep_time: '', 
+#     recipe_link: '', 
+#     image: '',
+#     likes: 0)
+
+# Recipe.create(  name: '', 
+#     description: '',
+#     prep_time: '', 
+#     recipe_link: '', 
+#     image: '',
+#     likes: 0)
+
+# Recipe.create(  name: '', 
+#     description: '',
+#     prep_time: '', 
+#     recipe_link: '', 
+#     image: '',
+#     likes: 0)
+
+# Recipe.create(  name: '', 
+#     description: '',
+#     prep_time: '', 
+#     recipe_link: '', 
+#     image: '',
+#     likes: 0)
+
+# Recipe.create(  name: '', 
+#     description: '',
+#     prep_time: '', 
+#     recipe_link: '', 
+#     image: '',
+#     likes: 0)
+
+# Recipe.create(  name: '', 
+#     description: '',
+#     prep_time: '', 
+#     recipe_link: '', 
+#     image: '',
+#     likes: 0)
+
+# Recipe.create(  name: '', 
+#     description: '',
+#     prep_time: '', 
+#     recipe_link: '', 
+#     image: '',
+#     likes: 0)
+
+# Recipe.create(  name: '', 
+#     description: '',
+#     prep_time: '', 
+#     recipe_link: '', 
+#     image: '',
+#     likes: 0)
+
+# Recipe.create(  name: '', 
+#     description: '',
+#     prep_time: '', 
+#     recipe_link: '', 
+#     image: '',
+#     likes: 0)
+    
    
     
 # Recipe.create(name: '', description: '', prep_time: '', recipe_link: '', image: '')
@@ -101,7 +381,7 @@ Recipe.create(  name: 'Asian Beef and Noodles',
 
 User.create(first_name: 'Julia',
     last_name: 'Child',
-    username: 'Julia',
+    username: 'julia',
     password: 'abc',
     email: 'julia.child@gmail.com',
     bio: 'Until I discovered cooking, I was never really interested in anything',
@@ -109,7 +389,7 @@ User.create(first_name: 'Julia',
 
 User.create(first_name: 'William',
     last_name: 'Shakespeare',
-    username: 'William_Shakes',
+    username: 'william_shakes',
     password: 'abc',
     email: 'william@gmail.com',
     bio: 'Tis an ill cook that cannot lick his own fingers',
