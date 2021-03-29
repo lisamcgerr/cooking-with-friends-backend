@@ -18,16 +18,11 @@ class UserSessionsController < ApplicationController
     end 
 
     def create
-        #byebug
-        user_session = UserSession.new(user_session_params)
-        #byebug
-        if user_session.save
-            #user_session = UserSession.create(user_session_params)
+        user_session = UserSession.create(user_session_params)
+        if user_session
             render json: user_session
         else
             render json: {message: 'user already in cooking session'}
-            #flash.alert = []
-            #flash.alert << ["user is already in cooking session"]
         end
     end
 

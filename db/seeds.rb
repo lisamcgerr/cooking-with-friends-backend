@@ -96,7 +96,7 @@ Recipe.create(  name: 'Garlic Beef Enchiladas',
     likes: 0)
 
 Recipe.create(  name: 'Skillet Mac & Cheese', 
-        description: 'This super creamy mac 'n' cheese is so simple it seems almost too easy! Kids really go for the rich cheese flavor, but I have never met an adult who didnt love it too. —Ann Bowers, Rockport, Texas',
+        description: 'This super creamy mac n cheese is so simple it seems almost too easy! Kids really go for the rich cheese flavor, but I have never met an adult who didnt love it too. —Ann Bowers, Rockport, Texas',
         prep_time: '25  minutes', 
         recipe_link: 'https://www.tasteofhome.com/recipes/skillet-mac-cheese/', 
         image: 'https://user-images.githubusercontent.com/73184313/112768183-5c5d5980-8fe0-11eb-8859-ff57dd750aad.jpeg',
@@ -123,12 +123,12 @@ Recipe.create(  name: 'Parmesan Chicken',
     image: 'https://user-images.githubusercontent.com/73184313/112768330-3dab9280-8fe1-11eb-8d89-e38c3cf6c201.jpeg',
     likes: 0)
 
-Recipe.create(  name: 'Traditional Meat Loaf', 
-    description: 'Topped with a sweet sauce, this traditional meat loaf recipe tastes so good that you might want to double it so everyone can have seconds. It also freezes well. —Gail Graham, Maple Ridge, British Columbia',
-    prep_time: '15 minutes', 
-    recipe_link: 'https://user-images.githubusercontent.com/73184313/112768346-561bad00-8fe1-11eb-96f1-4d5deec67427.jpeg', 
-    image: 'https://www.tasteofhome.com/recipes/traditional-meat-loaf/',
-    likes: 0)
+# Recipe.create(  name: 'Traditional Meat Loaf', 
+#     description: 'Topped with a sweet sauce, this traditional meat loaf recipe tastes so good that you might want to double it so everyone can have seconds. It also freezes well. —Gail Graham, Maple Ridge, British Columbia',
+#     prep_time: '15 minutes', 
+#     recipe_link: 'https://user-images.githubusercontent.com/73184313/112768346-561bad00-8fe1-11eb-96f1-4d5deec67427.jpeg', 
+#     image: 'https://www.tasteofhome.com/recipes/traditional-meat-loaf/',
+#     likes: 0)
 
 Recipe.create(  name: 'Firecracker Casserole', 
     description: 'My husband and I love this southwestern-style firecracker casserole. The flavor reminds us of enchiladas, but the recipe does not require the extra time to roll them up. —Teressa Eastman, El Dorado, Kansas',
@@ -362,23 +362,6 @@ Recipe.create(  name: 'Potato Kielbasa Skillet',
 #     likes: 0)
     
    
-    
-# Recipe.create(name: '', description: '', prep_time: '', recipe_link: '', image: '')
-# Recipe.create(name: '', description: '', prep_time: '', recipe_link: '', image: '')
-# Recipe.create(name: '', description: '', prep_time: '', recipe_link: '', image: '')
-# Recipe.create(name: '', description: '', prep_time: '', recipe_link: '', image: '')
-# Recipe.create(name: '', description: '', prep_time: '', recipe_link: '', image: '')
-# Recipe.create(name: '', description: '', prep_time: '', recipe_link: '', image: '')
-# Recipe.create(name: '', description: '', prep_time: '', recipe_link: '', image: '')
-# Recipe.create(name: '', description: '', prep_time: '', recipe_link: '', image: '')
-# Recipe.create(name: '', description: '', prep_time: '', recipe_link: '', image: '')
-# Recipe.create(name: '', description: '', prep_time: '', recipe_link: '', image: '')
-# Recipe.create(name: '', description: '', prep_time: '', recipe_link: '', image: '')
-# Recipe.create(name: '', description: '', prep_time: '', recipe_link: '', image: '')
-# Recipe.create(name: '', description: '', prep_time: '', recipe_link: '', image: '')
-# Recipe.create(name: '', description: '', prep_time: '', recipe_link: '', image: '')
-
-
 User.create(first_name: 'Julia',
     last_name: 'Child',
     username: 'julia',
@@ -396,61 +379,80 @@ User.create(first_name: 'William',
     image: 'https://user-images.githubusercontent.com/73184313/112050087-726da480-8b1e-11eb-884e-ec03154a1980.png')
 
 
-User.create(first_name: 'Lisa',
-            last_name: 'McGerr',
-            username: 'lisa',
-            password: 'abc',
-            email: 'lisamarie.mcgerr@gmail.com',
-            bio: 'I cook with wine, sometimes I even add it to the food',
-            image: 'https://user-images.githubusercontent.com/73184313/112050087-726da480-8b1e-11eb-884e-ec03154a1980.png')
+User.create(
+    first_name: 'Lisa',
+    last_name: 'McGerr',
+    username: 'lisa',
+    password: 'abc',
+    email: 'lisamarie.mcgerr@gmail.com',
+    bio: 'I cook with wine, sometimes I even add it to the food',
+    image: 'https://user-images.githubusercontent.com/73184313/112050087-726da480-8b1e-11eb-884e-ec03154a1980.png')
 
-User.create(first_name: 'Sam',
-            last_name: 'Olanipekun',
-            username: 'samo',
-            password: 'abc',
-            email: 'samo@gmail.com',
-            bio: 'Always start out with a larger pot than what you think you need',
-            image: 'https://user-images.githubusercontent.com/73184313/112050087-726da480-8b1e-11eb-884e-ec03154a1980.png')
+User.create(
+    first_name: 'Sam',
+    last_name: 'Olanipekun',
+    username: 'samo',
+    password: 'abc',
+    email: 'samo@gmail.com',
+    bio: 'Always start out with a larger pot than what you think you need',
+    image: 'https://user-images.githubusercontent.com/73184313/112050087-726da480-8b1e-11eb-884e-ec03154a1980.png')
 
-User.create(first_name: 'Dexter',
-            last_name: 'McGerr',
-            username: 'dog_who_loves_food',
-            password: 'abc',
-            email: 'give_me_treats@gmail.com',
-            bio: 'I will eat anything my parents give me',
-            image: 'https://user-images.githubusercontent.com/73184313/112050087-726da480-8b1e-11eb-884e-ec03154a1980.png')
-
-
-            User.create(first_name: 'Dex',
-                last_name: 'McGerr',
-                username: 'dog_who_loves_humans',
-                password: 'abc',
-                email: 'treats@gmail.com',
-                bio: 'I will eat anything my parents give me',
-                image: 'https://user-images.githubusercontent.com/73184313/112050087-726da480-8b1e-11eb-884e-ec03154a1980.png')
+User.create(
+    first_name: 'Dexter',
+    last_name: 'McGerr',
+    username: 'dog_who_loves_food',
+    password: 'abc',
+    email: 'give_me_treats@gmail.com',
+    bio: 'I will eat anything my parents give me',
+    image: 'https://user-images.githubusercontent.com/73184313/112050087-726da480-8b1e-11eb-884e-ec03154a1980.png')
 
 
-CookingSession.create(title: 'Enchailada Night', recipe_id: 1, host_id: 1, meeting_link: 'https://flatironschool.zoom.us/j/94771026740?pwd=WThoSTdkVnArVTQ1d29KVnhIdVdqUT09#success', date: Time.now )
-CookingSession.create(title: 'Family Cooking Night', recipe_id: 5, host_id: 1, meeting_link: 'https://flatironschool.zoom.us/j/94771026740?pwd=WThoSTdkVnArVTQ1d29KVnhIdVdqUT09#success', date: Time.now)
-CookingSession.create(title: 'Chicago Wednesday Night Cook Off', recipe_id: 7, host_id: 3, meeting_link: 'https://flatironschool.zoom.us/j/94771026740?pwd=WThoSTdkVnArVTQ1d29KVnhIdVdqUT09#success', date: Time.now)
+User.create(
+    first_name: 'Dex',
+    last_name: 'McGerr',
+    username: 'dog_who_loves_humans',
+    password: 'abc',
+    email: 'treats@gmail.com',
+    bio: 'I will eat anything my parents give me',
+    image: 'https://user-images.githubusercontent.com/73184313/112050087-726da480-8b1e-11eb-884e-ec03154a1980.png')
 
-UserSession.create(user_id: 1, cooking_session_id: 1)
-UserSession.create(user_id: 2, cooking_session_id: 1)
+6.times do
+    recipe_title = Recipe.all.sample
+    CookingSession.create(
+        title: recipe_title.name,
+        recipe_id: Recipe.all.sample.id,
+        host_id: User.all.sample.id,
+        meeting_link: 'https://flatironschool.zoom.us/j/94771026740?pwd=WThoSTdkVnArVTQ1d29KVnhIdVdqUT09#success',
+        date: Faker::Date.forward(days: 30) )
+end
+
+# CookingSession.create(title: 'Enchailada Night', recipe_id: 1, host_id: 1, meeting_link: 'https://flatironschool.zoom.us/j/94771026740?pwd=WThoSTdkVnArVTQ1d29KVnhIdVdqUT09#success', date: Time.now )
+# CookingSession.create(title: 'Family Cooking Night', recipe_id: 5, host_id: 1, meeting_link: 'https://flatironschool.zoom.us/j/94771026740?pwd=WThoSTdkVnArVTQ1d29KVnhIdVdqUT09#success', date: Time.now)
+# CookingSession.create(title: 'Chicago Wednesday Night Cook Off', recipe_id: 7, host_id: 3, meeting_link: 'https://flatironschool.zoom.us/j/94771026740?pwd=WThoSTdkVnArVTQ1d29KVnhIdVdqUT09#success', date: Time.now)
+
+20.times do
+    UserSession.create(
+        user_id: User.all.sample.id, 
+        cooking_session_id: CookingSession.all.sample.id
+    )
+end
+
+20.times do 
+    Comment.create(
+        user_id: User.all.sample.id, 
+        recipe_id: Recipe.all.sample.id,
+        post: "Great meal, will definitely make again"
+    )
+end
 
 
-UserSession.create(user_id: 4, cooking_session_id: 2)
-UserSession.create(user_id: 1, cooking_session_id: 2)
-UserSession.create(user_id: 5, cooking_session_id: 2)
 
-UserSession.create(user_id: 3, cooking_session_id: 3)
-UserSession.create(user_id: 4, cooking_session_id: 3)
-UserSession.create(user_id: 5, cooking_session_id: 3)
 
-Comment.create(post: 'Great dinner and very quick', user_id: 1, recipe_id: 1)
-Comment.create(post: 'comment 2', user_id:  1, recipe_id:  5)
-Comment.create(post: 'comment 3', user_id: 2, recipe_id: 1)
-Comment.create(post: 'comment 4', user_id: 3, recipe_id: 6)
-Comment.create(post: 'comment 5', user_id: 1, recipe_id: 4)
+
+# comments = ['I made these twice. 1st time just as recipe indicated and it was "Delicious"!! 2nd time I added a touch of cayenne and it was delicious. My daughter at them up. Next time Ill have to quadruple the recipe so I have a midnight snack ;)',
+# 'We loved these, easy to make and enjoyed by all!!',
+# ]
+
 
 puts "after successfully seeding..."
 puts "#{User.all.count} users"
