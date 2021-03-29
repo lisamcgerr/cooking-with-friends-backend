@@ -39,6 +39,7 @@ class CookingSessionsController < ApplicationController
 
     def destroy
         cooking_session = CookingSession.find_by(id: params[:id])
+        cooking_session.user_sessions.destroy_all
         cooking_session.destroy
         render json: {message: 'Your cooking class has been deleted'}
     end 

@@ -19,10 +19,10 @@ class UserSessionsController < ApplicationController
 
     def create
         user_session = UserSession.create(user_session_params)
-        if user_session
+        if user_session.valid?
             render json: user_session
         else
-            render json: {message: 'user already in cooking session'}
+            render json: {message: 'You are have already joined this cooking session'}
         end
     end
 
@@ -38,7 +38,7 @@ class UserSessionsController < ApplicationController
     def destroy
         user_session = UserSession.find_by(id: params[:id])
         user_session.destroy
-        render json: {message: 'Your account has been deleted'}
+        render json: {message: 'Your session has been removed'}
     end 
     
       private
