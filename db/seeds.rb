@@ -687,22 +687,45 @@ CookingSession.create(
     )
 
 
+comments = [
+    'Fantastic Meal -- easy to make', 
+    'My friends and I loved making this - super easy', 
+    'I love this recipe, add some lemon-pepper as well',
+    'Fun recipe - great twist on the original',
+    'Tasted wonderful would definitely make again',
+    'A little bland for my taste',
+    'This recipe was a little too salty',
+    'Have you thought about making a sugar-free version of this?',
+    'Can you give us a calorie breakdown for this?',
+    'I just started Paleo yesterday, and I’m wondering if there’s a way to make this without the ingredients',
+    'I dont have an oven, can i still make this? please reply immediately',
+    'Too much garlic',
+    'Was not a fan of this',
+    'Wish it was spicier',
+    'It was fun to make',
+    'I think I overcooked mine, overall okay recipe',
+    'I already recommended it to my friends!',
+    'Do you think we could do a vegan version of this',
+    'I undercooked mine !',
+    'I would not recomment this recipe',
+    'I loved it even more with a touch of garlic salt',
+    'This took longer than I thought',
+    'Cannot wait to make this again',
+    'My family has had this 3 times already',
+    'Compliments to the chef!',
+    'I could make a better version of this',
+    'Was not what I was expecting'
+]
 
-40.times do 
+
+60.times do 
     Comment.create(
         user_id: User.all.sample.id, 
         recipe_id: Recipe.all.sample.id,
-        post: "Great meal, will definitely make again"
+        post: comments.sample
     )
 end
 
-
-
-
-
-# comments = ['I made these twice. 1st time just as recipe indicated and it was "Delicious"!! 2nd time I added a touch of cayenne and it was delicious. My daughter at them up. Next time Ill have to quadruple the recipe so I have a midnight snack ;)',
-# 'We loved these, easy to make and enjoyed by all!!',
-# ]
 
 
 puts "after successfully seeding..."
