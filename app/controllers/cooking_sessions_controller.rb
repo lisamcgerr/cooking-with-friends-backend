@@ -1,18 +1,20 @@
 class CookingSessionsController < ApplicationController
     def index
         cooking_sessions = CookingSession.all
-        render json: cooking_sessions.to_json(:include => {
-            :recipe => {:only => [:name, :description, :prep_time, :recipe_link, :image, :likes]},
-            :users => {:only => [:id, :first_name, :last_name, :username, :email, :bio, :image ]}
-        }, :except => [:updated_at, :created_at])
+        render json: cooking_sessions
+        # render json: cooking_sessions.to_json(:include => {
+        #     :recipe => {:only => [:name, :description, :prep_time, :recipe_link, :image, :likes]},
+        #     :users => {:only => [:id, :first_name, :last_name, :username, :email, :bio, :image ]}
+        # }, :except => [:updated_at, :created_at])
     end
 
     def show
         cooking_session = CookingSession.find_by(id: params[:id])
-        render json: cooking_session.to_json(:include => {
-            :recipe => {:only => [:name, :description, :prep_time, :recipe_link, :image, :likes]},
-            :users => {:only => [:id, :first_name, :last_name, :username, :email, :bio, :image ]}
-        }, :except => [:updated_at, :created_at])
+        render json: cooking_session
+        # render json: cooking_session.to_json(:include => {
+        #     :recipe => {:only => [:name, :description, :prep_time, :recipe_link, :image, :likes]},
+        #     :users => {:only => [:id, :first_name, :last_name, :username, :email, :bio, :image ]}
+        # }, :except => [:updated_at, :created_at])
     end 
 
 

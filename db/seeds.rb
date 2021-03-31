@@ -362,68 +362,67 @@ Recipe.create(  name: 'Potato Kielbasa Skillet',
 #     likes: 0)
     
    
-User.create(first_name: 'Julia',
-    last_name: 'Child',
-    username: 'julia',
-    password: 'abc',
-    email: 'julia.child@gmail.com',
-    bio: 'Until I discovered cooking, I was never really interested in anything',
-    image: 'https://user-images.githubusercontent.com/73184313/112050087-726da480-8b1e-11eb-884e-ec03154a1980.png')
+User.create(first_name: 'Tony',
+    last_name: 'Stark',
+    username: 'ironman',
+    password: 'cooking2020',
+    email: 'Tony.Stark@starkIndustries.com',
+    bio: 'Is it better to be feared or respected? I say, is it too much to ask for both?',
+    image: 'https://user-images.githubusercontent.com/73184313/113024044-eaa21e80-914b-11eb-8a49-751718a9bdff.jpg')
 
-User.create(first_name: 'William',
-    last_name: 'Shakespeare',
-    username: 'william_shakes',
-    password: 'abc',
-    email: 'william@gmail.com',
-    bio: 'Tis an ill cook that cannot lick his own fingers',
-    image: 'https://user-images.githubusercontent.com/73184313/112050087-726da480-8b1e-11eb-884e-ec03154a1980.png')
+User.create(first_name: 'Thor',
+    last_name: 'Odinson',
+    username: 'thor',
+    password: 'cooking2020',
+    email: 'thor.odinson@asgard.com',
+    bio: 'Hammer',
+    image: 'https://user-images.githubusercontent.com/73184313/113024193-17563600-914c-11eb-9dcf-8948e6ba30de.jpg')
 
 
 User.create(
     first_name: 'Lisa',
     last_name: 'McGerr',
-    username: 'lisa',
-    password: 'abc',
+    username: 'lisa_loves_cooking',
+    password: 'cooking2020',
     email: 'lisamarie.mcgerr@gmail.com',
     bio: 'I cook with wine, sometimes I even add it to the food',
-    image: 'https://user-images.githubusercontent.com/73184313/112050087-726da480-8b1e-11eb-884e-ec03154a1980.png')
+    image: 'https://user-images.githubusercontent.com/73184313/113022909-bbd77880-914a-11eb-80aa-3890a51b3794.jpg')
 
-User.create(
-    first_name: 'Sam',
-    last_name: 'Olanipekun',
-    username: 'samo',
-    password: 'abc',
-    email: 'samo@gmail.com',
-    bio: 'Always start out with a larger pot than what you think you need',
-    image: 'https://user-images.githubusercontent.com/73184313/112050087-726da480-8b1e-11eb-884e-ec03154a1980.png')
+# User.create(
+#     first_name: 'Sam',
+#     last_name: 'Olanipekun',
+#     username: 'samo',
+#     password: 'cooking2020',
+#     email: 'samo@gmail.com',
+#     bio: 'Always start out with a larger pot than what you think you need',
+#     image: 'https://user-images.githubusercontent.com/73184313/112050087-726da480-8b1e-11eb-884e-ec03154a1980.png')
 
 User.create(
     first_name: 'Dexter',
-    last_name: 'McGerr',
-    username: 'dog_who_loves_food',
-    password: 'abc',
+    last_name: 'The King Charles Cavalier Spaniel',
+    username: 'dexy_loves_eating',
+    password: 'cooking2020',
     email: 'give_me_treats@gmail.com',
-    bio: 'I will eat anything my parents give me',
-    image: 'https://user-images.githubusercontent.com/73184313/112050087-726da480-8b1e-11eb-884e-ec03154a1980.png')
+    bio: 'My appetite for a good meal started as a young pup. At first my mom didnt want to give me any table food...then one day a scrap of chicken fell to the ground. Since then I have helped my parents cooking in the kitchen at almost every meal. I sit patiently waiting for my turn to get some food. I dont really like sharing my food with others...so do NOT ask me. woof woof woof....',
+    image: 'https://user-images.githubusercontent.com/73184313/113022048-d1986e00-9149-11eb-9d0b-6e0f5b46d8b4.png')
 
 
 User.create(
-    first_name: 'Dex',
-    last_name: 'McGerr',
-    username: 'dog_who_loves_humans',
-    password: 'abc',
-    email: 'treats@gmail.com',
-    bio: 'I will eat anything my parents give me',
-    image: 'https://user-images.githubusercontent.com/73184313/112050087-726da480-8b1e-11eb-884e-ec03154a1980.png')
+    first_name: 'Wanda',
+    last_name: 'Maximoff',
+    username: 'scarlet_witch',
+    password: 'cooking2020',
+    email: 'scarlet_witch@avengers.com',
+    bio: 'Dont Worry, Darling. I Have Everything Under Control.',
+    image: 'https://user-images.githubusercontent.com/73184313/113024525-761baf80-914c-11eb-92b9-5743fdc6f69b.jpg')
 
 6.times do
-    recipe_title = Recipe.all.sample
     CookingSession.create(
-        title: recipe_title.name,
+        title: Recipe.all.sample.name,
         recipe_id: Recipe.all.sample.id,
         host_id: User.all.sample.id,
         meeting_link: 'https://flatironschool.zoom.us/j/94771026740?pwd=WThoSTdkVnArVTQ1d29KVnhIdVdqUT09#success',
-        date: Faker::Date.forward(days: 30) )
+        date: Faker::Date.forward(days: 30).strftime("%A, %B %e, %Y at %I:%M %p") )
 end
 
 # CookingSession.create(title: 'Enchailada Night', recipe_id: 1, host_id: 1, meeting_link: 'https://flatironschool.zoom.us/j/94771026740?pwd=WThoSTdkVnArVTQ1d29KVnhIdVdqUT09#success', date: Time.now )
@@ -437,7 +436,7 @@ end
     )
 end
 
-20.times do 
+40.times do 
     Comment.create(
         user_id: User.all.sample.id, 
         recipe_id: Recipe.all.sample.id,
