@@ -399,7 +399,7 @@ CookingSession.create(
     recipe_id: Recipe.all.sample.id,
     host_id: 4,
     meeting_link: 'https://flatironschool.zoom.us/j/94771026740?pwd=WThoSTdkVnArVTQ1d29KVnhIdVdqUT09#success',
-    date: Faker::Date.forward(days: 30))
+    date: Faker::Date.forward(days: 30).to_s)
 
     UserSession.create(
         user_id: 4, 

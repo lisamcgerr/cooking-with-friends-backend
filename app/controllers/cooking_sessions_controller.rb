@@ -23,7 +23,7 @@ class CookingSessionsController < ApplicationController
         if cooking_session
             cook_id = cooking_session.id
             user_session = UserSession.create(user_id: cooking_session.host_id, cooking_session_id: cooking_session.id)
-            render json: cooking_session
+            render json: { cooking_session: cooking_session, created: cooking_session.date.strftime("%A, %B %e, %Y at %I:%M %p")}
 
         else
             render json: { error: 'failed to create a cooking session' }, status: :not_acceptable
