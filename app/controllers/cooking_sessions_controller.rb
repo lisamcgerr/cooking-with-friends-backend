@@ -23,8 +23,7 @@ class CookingSessionsController < ApplicationController
         if cooking_session
             cook_id = cooking_session.id
             user_session = UserSession.create(user_id: cooking_session.host_id, cooking_session_id: cooking_session.id)
-            render json: { cooking_session: cooking_session, created: cooking_session.date.strftime("%A, %B %e, %Y at %I:%M %p")}
-
+            render json: cooking_session
         else
             render json: { error: 'failed to create a cooking session' }, status: :not_acceptable
         end
@@ -49,6 +48,6 @@ class CookingSessionsController < ApplicationController
       private
     
     def cooking_session_params
-        params.require(:cooking_session).permit(:title, :date, :meeting_link, :recipe_id, :host_id)
+        params.require(:cooking_session).permit(:title, :time, :meeting_link, :recipe_id, :host_id )
     end  
 end

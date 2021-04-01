@@ -375,6 +375,7 @@ CookingSession.create(
     title: "Marvel Madness Taco Night",
     recipe_id: 8,
     host_id: 1,
+    time: 'May 5, 2021 at 6:00pm',
     meeting_link: 'https://flatironschool.zoom.us/j/94771026740?pwd=WThoSTdkVnArVTQ1d29KVnhIdVdqUT09#success',
     date: Faker::Date.forward(days: 30))
 
@@ -398,6 +399,7 @@ CookingSession.create(
     title: "Leave it to the Dogs Dinner Party",
     recipe_id: Recipe.all.sample.id,
     host_id: 4,
+    time: 'April 4, 2021 at 5:00pm',
     meeting_link: 'https://flatironschool.zoom.us/j/94771026740?pwd=WThoSTdkVnArVTQ1d29KVnhIdVdqUT09#success',
     date: Faker::Date.forward(days: 30).to_s)
 
@@ -417,6 +419,7 @@ CookingSession.create(
     title: "Meeting of the Minds Feast",
     recipe_id: 20,
     host_id: 11,
+    time: 'April 21, 2021 at 5:30pm',
     meeting_link: 'https://flatironschool.zoom.us/j/94771026740?pwd=WThoSTdkVnArVTQ1d29KVnhIdVdqUT09#success',
     date: Faker::Date.forward(days: 30))
 
@@ -436,6 +439,7 @@ CookingSession.create(
     title: "Batman vs Superman Casserole Bake Off",
     recipe_id: 19,
     host_id: 7,
+    time: 'May 15, 2021 at 12:00pm',
     meeting_link: 'https://flatironschool.zoom.us/j/94771026740?pwd=WThoSTdkVnArVTQ1d29KVnhIdVdqUT09#success',
     date: Faker::Date.forward(days: 30))
 
@@ -455,6 +459,7 @@ CookingSession.create(
     title: "Women's Luncheon",
     recipe_id: 6,
     host_id: 9,
+    time: 'May 11, 2021 at 11:00am',
     meeting_link: 'https://flatironschool.zoom.us/j/94771026740?pwd=WThoSTdkVnArVTQ1d29KVnhIdVdqUT09#success',
     date: Faker::Date.forward(days: 30))
 
@@ -479,6 +484,7 @@ CookingSession.create(
     title: "Talk about Strength Virtual Dinner",
     recipe_id: 22,
     host_id: 13,
+    time: 'May 9, 2021 at 7:45pm',
     meeting_link: 'https://flatironschool.zoom.us/j/94771026740?pwd=WThoSTdkVnArVTQ1d29KVnhIdVdqUT09#success',
     date: Faker::Date.forward(days: 30))
 
@@ -503,6 +509,7 @@ CookingSession.create(
     title: "Avengers Virtual Lunch & Footage Review",
     recipe_id: 12,
     host_id: 12,
+    time: 'August 18, 2021 at 11:30am',
     meeting_link: 'https://flatironschool.zoom.us/j/94771026740?pwd=WThoSTdkVnArVTQ1d29KVnhIdVdqUT09#success',
     date: Faker::Date.forward(days: 30))
 
@@ -542,6 +549,7 @@ CookingSession.create(
     title: "Justice League Team Banquet",
     recipe_id: 8,
     host_id: 8,
+    time: 'April 2, 2021 at 6:00pm',
     meeting_link: 'https://flatironschool.zoom.us/j/94771026740?pwd=WThoSTdkVnArVTQ1d29KVnhIdVdqUT09#success',
     date: Faker::Date.forward(days: 30))
 
@@ -581,6 +589,7 @@ CookingSession.create(
     title: "Lisa Loves Superheros Luncheon",
     recipe_id: 19,
     host_id: 3,
+    time: 'August 11, 2021 at 12:00pm',
     meeting_link: 'https://flatironschool.zoom.us/j/94771026740?pwd=WThoSTdkVnArVTQ1d29KVnhIdVdqUT09#success',
     date: Faker::Date.forward(days: 30))
 
@@ -610,6 +619,7 @@ CookingSession.create(
     title: "Training to be Superhero Table with Treats",
     recipe_id: 2,
     host_id: 9,
+    time: 'May 1, 2021 at 10:00am',
     meeting_link: 'https://flatironschool.zoom.us/j/94771026740?pwd=WThoSTdkVnArVTQ1d29KVnhIdVdqUT09#success',
     date: Faker::Date.forward(days: 30))
 
@@ -634,6 +644,7 @@ CookingSession.create(
     title: "We love Red Virtual Snack",
     recipe_id: 4,
     host_id: 5,
+    time: 'June 5, 2021 at 12:00pm',
     meeting_link: 'https://flatironschool.zoom.us/j/94771026740?pwd=WThoSTdkVnArVTQ1d29KVnhIdVdqUT09#success',
     date: Faker::Date.forward(days: 30))
 
@@ -658,6 +669,7 @@ CookingSession.create(
     title: "Dexter The Cavalier and His Ladies Lunch",
     recipe_id: 8,
     host_id: 4,
+    time: 'July 5, 2021 at 12:15pm',
     meeting_link: 'https://flatironschool.zoom.us/j/94771026740?pwd=WThoSTdkVnArVTQ1d29KVnhIdVdqUT09#success',
     date: Faker::Date.forward(days: 30))
 

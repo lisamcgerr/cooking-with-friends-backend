@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_22_202243) do
+ActiveRecord::Schema.define(version: 2021_04_01_121444) do
 
   create_table "comments", force: :cascade do |t|
     t.string "post"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 2021_03_22_202243) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "host_id"
     t.boolean "public", default: false
+    t.string "time"
     t.index ["recipe_id"], name: "index_cooking_sessions_on_recipe_id"
   end
 

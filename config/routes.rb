@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   patch '/recipes/:id', to: 'recipes#update'
   post '/allclasses', to: 'user_sessions#create'
   patch '/recipes', to: 'recipes#update'
+  
+  patch '/createaclass', to: 'cooking_sessions#update'
 
   delete 'allclasses', to: 'cooking_session#destroy'
 
