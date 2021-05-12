@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   delete 'allclasses', to: 'cooking_session#destroy'
 
   patch '/editprofile', to: 'users#update'
+  post '/createcomment', to: 'comments#create'
 
 
 end

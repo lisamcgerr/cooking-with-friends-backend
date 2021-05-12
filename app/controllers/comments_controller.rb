@@ -8,4 +8,10 @@ class CommentsController < ApplicationController
         comment = Comment.find_by(id: params[:id])
         render json: comment
     end
+
+    def create
+        comment = Comment.new(comment_params)
+        comment.save
+        render json: comment
+    end
 end
