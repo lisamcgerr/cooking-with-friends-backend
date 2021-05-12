@@ -14,4 +14,16 @@ class CommentsController < ApplicationController
         comment.save
         render json: comment
     end
+
+    def destroy
+        comment = Comment.find_by(id: params[:id])
+        comment.destroy
+        render json: {message: 'Your comment has been deleted'}
+    end
+
+    private
+
+    def comment_params
+        params.require(:comment).permit(:post, :user_id, :recipe_id)
+    end
 end
