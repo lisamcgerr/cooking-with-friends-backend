@@ -22,6 +22,7 @@ Rails.application.routes.draw do
 
   patch '/editprofile', to: 'users#update'
   post '/createcomment', to: 'comments#create'
+  delete '/recipes', to: 'comments#destroy'
 
 
 end
