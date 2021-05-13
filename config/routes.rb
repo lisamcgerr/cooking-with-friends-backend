@@ -5,24 +5,34 @@ Rails.application.routes.draw do
   resources :recipes
   resources :users
 
+
+  #<----------- users/auth routes ---------->
   post '/signup', to: 'users#create'
-  post '/recipes/new', to: 'recipes#create'
-  get '/recipes', to: 'recipes#index'
   post '/login', to: 'auth#create'
   get '/profile', to: 'auth#show'
-  post '/createaclass', to: 'cooking_sessions#create'
-  post '/createaclass', to: 'user_sessions#create'
+  patch '/editprofile', to: 'users#update'
+  delete '/editprofile', to: 'users#destroy'
+  
+  #<----------- recipes routes ---------->
+  post '/recipes/new', to: 'recipes#create'
+  get '/recipes', to: 'recipes#index'
   patch '/recipes/:id', to: 'recipes#update'
-  post '/allclasses', to: 'user_sessions#create'
   patch '/recipes', to: 'recipes#update'
   
+  #<----------- cooking_sessions routes ---------->
   patch '/createaclass', to: 'cooking_sessions#update'
-
   delete 'allclasses', to: 'cooking_session#destroy'
+  post '/createaclass', to: 'cooking_sessions#create'
+  
 
-  patch '/editprofile', to: 'users#update'
+  #<----------- user_sessions routes ---------->
+  post '/createaclass', to: 'user_sessions#create'
+  post '/allclasses', to: 'user_sessions#create'
+  
+  #<----------- comments routes ---------->
   post '/createcomment', to: 'comments#create'
   delete '/recipes', to: 'comments#destroy'
+  patch 'recipes', to: 'comments#update'
 
 
 end
