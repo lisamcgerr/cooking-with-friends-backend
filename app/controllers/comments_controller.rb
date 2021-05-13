@@ -11,8 +11,11 @@ class CommentsController < ApplicationController
 
     def create
         comment = Comment.new(comment_params)
-        comment.save
-        render json: comment
+        if comment.save
+            render json: comment
+        else
+            render json: {error: 'failed to create comment'}, status: :not_acceptable
+        end
     end
 
     def destroy
