@@ -10,11 +10,21 @@ class CommentsController < ApplicationController
     end
 
     def create
+        #byebug
         comment = Comment.new(comment_params)
         if comment.save
             render json: comment
         else
             render json: {error: 'failed to create comment'}, status: :not_acceptable
+        end
+    end
+
+    def update
+        comment = Comment.find_by(id: params[:id])
+        if comment.update(comment_params)
+            render json: comment
+        else
+            render json: {error: 'failed to update comment'}, status: :not_acceptable
         end
     end
 
