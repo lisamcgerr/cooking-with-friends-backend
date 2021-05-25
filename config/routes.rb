@@ -30,7 +30,7 @@ Rails.application.routes.draw do
   post '/allclasses', to: 'user_sessions#create'
   
   #<----------- comments routes ---------->
-  post '/createcomment', to: 'comments#create'
+  post '/recipes', to: 'comments#create'
   delete '/recipes', to: 'comments#destroy'
   patch 'recipes', to: 'comments#update'
 
