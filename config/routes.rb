@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   resources :recipes
   resources :users
 
-
   #<----------- users/auth routes ---------->
   post '/signup', to: 'users#create'
   post '/login', to: 'auth#create'

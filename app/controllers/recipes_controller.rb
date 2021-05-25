@@ -11,16 +11,13 @@ class RecipesController < ApplicationController
     end
     
     def create
-        #byebug
         recipe = Recipe.new(recipe_params)
-        #byebug
         recipe.save
         render json: recipe
     end
 
     def update
         recipe = Recipe.find_by(id: params[:id])
-        #byebug
         if recipe.update(recipe_params)
             render json:recipe
         else 
